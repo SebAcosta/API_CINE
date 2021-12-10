@@ -54,10 +54,10 @@ app.post('/login', async(req,res)=>{
     connection.query(sql,(err, rows)=>{
         if(rows){
             res.status(200).json({code: 200})
-            console.log(rows)
+            console.log(rows.nombre)
             return
         }
-        res.status(500).json({code:500, message:sql});
+        res.status(500).json({code:500});
         console.log(sql)
     })
 })
