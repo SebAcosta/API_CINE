@@ -18,6 +18,7 @@ function login(){
     }).then(function(res){
         if (res.data.code === 200){
             window.location.href = 'inicio.html'
+            alert("datos correctos")
             console.log(res);
         }else{
             alert("Datos incorrectos")
