@@ -52,7 +52,7 @@ app.post('/login', async(req,res)=>{
     var sql = `select * from Usuarios where usuario = '${usuario}' AND contrasenia = '${contrasenia}';`;
     const rows = connection.query(sql);
 
-    if(rows == 1){
+    if(rows){
         return res.status(200).json({code:200});
     }
     res.status(500).json({code: 500})
