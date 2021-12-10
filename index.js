@@ -19,11 +19,10 @@ const db2 = new sqlite3.Database("./Usuarios.db",(err)=>{
 });
 
 const connection = mysql.createConnection({
-    connectionLimit: 10,
-    host: 'localhost',
-    user: 'root',
-    password: '2E9S1a#12019',
-    database: 'api'
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'bc47057733f24a',
+    password: '8cffa831',
+    database: 'heroku_1725295e670d353'
 });
 
 connection.connect(error =>{
