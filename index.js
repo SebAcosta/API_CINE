@@ -1,5 +1,4 @@
 const express = require("express");
-const sqlite3 = require("sqlite3");
 const path = require('path');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
@@ -9,14 +8,6 @@ const app = express();
 app.use(express.json())
 app.use(express.static(__dirname ));
 app.use(bodyParser.json())
-
-const db2 = new sqlite3.Database("./Usuarios.db",(err)=>{
-    if(err){
-        console.log('No se puede conectar a la base de datos 2');
-    }else{
-        console.log('Conectado a la base de datos 2');
-    }
-});
 
 const connection = mysql.createConnection({
     host: 'us-cdbr-east-05.cleardb.net',
