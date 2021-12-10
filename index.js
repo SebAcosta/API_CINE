@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.static(__dirname ));
 app.use(bodyParser.json())
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: 'us-cdbr-east-05.cleardb.net',
     user: 'bc47057733f24a',
     password: '8cffa831',
