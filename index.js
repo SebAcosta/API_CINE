@@ -19,8 +19,24 @@ const connection = mysql.createConnection({
 connection.connect(error =>{
     if (error){
         console.log("No se pudo conectar a la BD api", error)
+        setTimeout(handleDisconnect, 2000);
     }else{
         console.log("Conectado a BD api")
+    }
+})
+
+function handleDisconnect(){
+    connection = mysql.createConnection({
+        host: 'us-cdbr-east-05.cleardb.net',
+        user: 'bc47057733f24a',
+        password: '8cffa831',
+        database: 'heroku_1725295e670d353'
+    })
+}
+
+connection.on('error',function(err){
+    if (err.code === 'PROTOCOL_CONNECTION_LOST'){
+        handleDisconnect();
     }
 })
 
