@@ -1,5 +1,5 @@
 var headers = {"Access-Control-Allow-Origin": null, "Content-Type": "image/jpg"};
-var url = "http://localhost:5000";
+var url = "https://reserv-api.herokuapp.com";
 
 function loadPeliculas(){
     axios.get(url + "/peliculas", headers)
