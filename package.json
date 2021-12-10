@@ -4,7 +4,7 @@
   "description": "Mi primer ejemplo API",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node index.js"
   },
   "author": "Acosta",
   "license": "ISC",
