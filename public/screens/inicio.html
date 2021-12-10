@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1b82b276ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/inicio.css">
+    <script src="./JS/peliculas.js"></script>
+</head>
+<body onload="loadPeliculas()">
+    <div class="containerMain">
+        <div class="containerBar">
+            <div class="logo">
+                <h6>Cine</h6>
+            </div>
+            <div class="busqueda">
+                <input class="inputBar" type="text" id="busqueda" placeholder="Buscar Película">
+                <button onclick="individual()" class="buttonSearch" id='buscar'><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <h1>Tenemos funciones para las siguientes películas</h1>
+    </div>
+</body>
+<script>
+    function individual(){
+        var titulo = document.getElementById('busqueda').value
+        console.log(titulo)
+        var ref = "individual.html?titulo=" + titulo
+        window.location.href= ref
+    }
+</script>
+</html>

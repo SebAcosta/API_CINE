@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1b82b276ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/Signin.css">
+</head>
+<body onload="init()">
+    <div class="containerMain">
+        
+        <div class="containerRegister">
+            <h1>Registrarse</h1>
+            <input class="inputNombre" type="text" id="nombres" placeholder="Nombre">
+            <input class="inputApellidos" type="text" id="apellidos" placeholder="Apellidos">
+            <input class="input" type="text" id="usuario" placeholder="Usuario">
+            <input class="input" type="text" id="contrasenia" placeholder="Contraseña">
+            <p class="textNac">Fecha de Nacimiento</p>
+            <input class="inputNac" type="text" id="dia" placeholder="Día">
+            <input class="inputNac" type="text" id="mes" placeholder="Mes">
+            <input class="inputNac" type="text" id="anio" placeholder="Año">
+            <br>
+            <p>Estoy de acuerdo con Terminos y Condiciones</p>
+            <br>
+            <input type="submit" class="btn-secundary" onclick="window.location.href='Login.html'"  value="Iniciar sesión">
+            <input type="submit" class="btn-primary" value="Registrarse">
+            
+        </div>
+    </div>
+    <script src="./JS/signin.js"></script>
+</body>
+</html>

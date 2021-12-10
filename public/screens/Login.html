@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1b82b276ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body onload="init()">
+    <div class="containerMain">
+        
+        <div class="containerLogin">
+            <h1>Iniciar sesión</h1>
+            <input class="input" type="text" id="usuario" placeholder="Usuario">
+            <input class="input" type="text" id="contrasenia" placeholder="Contraseña">
+            <br>
+            <p><a href='#'>¿Olvidaste tu contraseña?</a></p>
+            <input type="submit" class="btn-secundary" onclick="window.location.href='Signin.html'"  value="Registrate">
+            <input type="submit" class="btn-primary" value="Iniciar sesión">
+            <script src="./JS/login.js"></script>
+        </div> 
+    </div>
+</body>
+</html>
