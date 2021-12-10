@@ -52,11 +52,11 @@ app.post('/login', async(req,res)=>{
     var sql = `select * from Usuarios where usuario = '${usuario}' AND contrasenia = '${contrasenia}';`;
 
     connection.query(sql,(err, rows)=>{
-        if(err){
-            res.status(500).json({code: 500})
+        if(rows){
+            res.status(200).json({code: 200})
             return
         }
-        return res.status(200).json({code:200});
+        return res.status(500).json({code:500});
         
     })
 })
