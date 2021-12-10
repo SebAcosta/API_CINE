@@ -50,13 +50,15 @@ app.use(function(req, res, next) {
 app.post('/login', async(req,res)=>{
     const {usuario, contrasenia} = req.body;
     var sql = `select * from Usuarios where usuario = '${usuario}' AND contrasenia = '${contrasenia}';`;
-    const rows = connection.query(sql);
 
-    if(rows){
+    connection.query(sql,(err, rows)=>{
+        if(err){
+            res.status(500).json({code: 500})
+            return
+        }
         return res.status(200).json({code:200});
-    }
-    res.status(500).json({code: 500})
-    return
+        
+    })
 })
 
 app.post('/signin',async(req,res)=>{
