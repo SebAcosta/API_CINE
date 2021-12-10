@@ -52,7 +52,7 @@ app.post('/login', async(req,res)=>{
     var sql = `select * from Usuarios where usuario = '${usuario}' AND contrasenia = '${contrasenia}';`;
 
     connection.query(sql,(err, rows)=>{
-        if(rows.length){
+        if(rows.length == 1){
             res.status(200).json({code: 200})
             console.log(sql)
             return
