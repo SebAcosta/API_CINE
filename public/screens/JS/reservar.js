@@ -1,7 +1,7 @@
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 var titulo = urlParams.get('titulo');
-var url = 'http://localhost:5000/reservar'
+var url = 'https://reserv-api.herokuapp.com/reservar'
 
 function init(){
     var body = document.querySelector("body");
