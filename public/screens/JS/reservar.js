@@ -1,7 +1,8 @@
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 var titulo = urlParams.get('titulo');
-var url = 'https://reserv-api.herokuapp.com/reservar'
+var server = "https://reservapi.azurewebsites.net"
+var url = `${server}/reservar`;
 
 function init(){
     var body = document.querySelector("body");

@@ -1,5 +1,6 @@
 var headers = {"Access-Control-Allow-Origin": null, "Content-Type": "image/jpg"};
-var url = "https://reserv-api.herokuapp.com/peliculas";
+var server = "https://reservapi.azurewebsites.net"
+var url = `${server}/peliculas`;
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 var titulo = urlParams.get('titulo');

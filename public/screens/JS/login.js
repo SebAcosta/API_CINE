@@ -10,7 +10,7 @@ function login(){
     axios({
         //headers: {"Access-Control-Allow-Request": null, 'Content-Type': 'application/json'},
         method: 'post',
-        url:'https://reserv-api.herokuapp.com/login',
+        url:'https://reservapi.azurewebsites.net/login',
         data:{
             usuario: usuario,
             contrasenia: contrasenia
