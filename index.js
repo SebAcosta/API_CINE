@@ -10,10 +10,14 @@ app.use(express.static(__dirname ));
 app.use(bodyParser.json())
 
 var connection = mysql.createConnection({
-    host: 'reservapi-server.mysql.database.azure.com',
-    user: 'myadmin',
-    password: '12345678a!',
-    database: 'quickstartdb'
+    //host: 'reservapi-server.mysql.database.azure.com',
+    //user: 'myadmin',
+    //password: '12345678a!',
+    //database: 'quickstartdb'
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'bc47057733f24a',
+    password: '8cffa831',
+    database: 'heroku_1725295e670d353'
 });
 
 connection.connect(error =>{
@@ -27,10 +31,10 @@ connection.connect(error =>{
 
 function handleDisconnect(){
     connection = mysql.createConnection({
-        host: 'reservapi-server.mysql.database.azure.com',
-        user: 'myadmin',
-        password: '12345678a!',
-        database: 'quickstartdb'
+        host: 'us-cdbr-east-05.cleardb.net',
+        user: 'bc47057733f24a',
+        password: '8cffa831',
+        database: 'heroku_1725295e670d353'
     })
 }
 
